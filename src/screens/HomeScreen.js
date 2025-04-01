@@ -144,7 +144,7 @@ export default function HomeScreen({ navigation, route }) {
         </TouchableOpacity>
       </View>
 
-      <View style={styles.searchContainer}>
+      <View style={[styles.searchContainer, { paddingHorizontal: 12 }]}>
         <View style={styles.searchBar}>
           <TextInput
             placeholder="Search for letters"
@@ -152,8 +152,8 @@ export default function HomeScreen({ navigation, route }) {
             onChangeText={setSearch}
             style={styles.searchInput}
             placeholderTextColor="#C5C5C5"
-            keyboardType="default" // Defina o tipo do teclado de forma padrão
-            autoCorrect={false} // Desativa a correção automática
+            keyboardType="default"
+            autoCorrect={false}
           />
           <Image
             source={require("../../assets/search.png")}
@@ -176,12 +176,14 @@ export default function HomeScreen({ navigation, route }) {
         data={filteredCards}
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
-          <CardItem
-            card={item}
-            isFavorite={favorites.some((fav) => fav.id === item.id)}
-            onToggleFavorite={() => toggleFavorite(item)}
-            onPress={() => handleCardPress(item)} // Add the onPress handler here
-          />
+          <View style={{ paddingHorizontal: 12 }}>
+            <CardItem
+              card={item}
+              isFavorite={favorites.some((fav) => fav.id === item.id)}
+              onToggleFavorite={() => toggleFavorite(item)}
+              onPress={() => handleCardPress(item)}
+            />
+          </View>
         )}
         contentContainerStyle={{ paddingBottom: 20 }}
       />
@@ -265,8 +267,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
-    paddingHorizontal: 12,
-    paddingTop: 80,
+    paddingTop: 80, // espaço para o header fixo
   },
   header: {
     backgroundColor: "#D32F2F",
@@ -306,7 +307,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     paddingVertical: 8,
     borderWidth: 0,
-    outlineStyle: 'none',   // Removendo o contorno ao focar
+    outlineStyle: "none",
   },
   filterButton: {
     backgroundColor: "#1F4E79",
