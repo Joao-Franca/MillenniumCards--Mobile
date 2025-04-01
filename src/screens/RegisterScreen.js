@@ -9,10 +9,10 @@ export default function RegisterScreen({ navigation }) {
   const handleRegister = async () => {
     if (username && password) {
       await storeData(`user_${username}`, { username, password });
-      Alert.alert('Sucesso', 'Usuário cadastrado com sucesso!');
+      Alert.alert('Sucess', 'User registered successfully!');
       navigation.navigate('Login');
     } else {
-      Alert.alert('Erro', 'Preencha todos os campos!');
+      Alert.alert('Error', 'Fill in all the fields!');
     }
   };
 
@@ -20,29 +20,29 @@ export default function RegisterScreen({ navigation }) {
     <View style={styles.container}>
       <Text style={styles.title}>Millennium Cards</Text>
 
-      <Text style={styles.label}>Usuário</Text>
+      <Text style={styles.label}>User</Text>
       <TextInput
         style={styles.input}
         onChangeText={setUsername}
         value={username}
-        placeholder="Digite seu usuário"
+        placeholder="Enter your username"
       />
 
-      <Text style={styles.label}>Senha</Text>
+      <Text style={styles.label}>Password</Text>
       <TextInput
         style={styles.input}
         onChangeText={setPassword}
         value={password}
-        placeholder="Digite sua senha"
+        placeholder="Enter your password"
         secureTextEntry
       />
 
       <TouchableOpacity style={styles.button} onPress={handleRegister}>
-        <Text style={styles.buttonText}>Cadastrar</Text>
+        <Text style={styles.buttonText}>Register</Text>
       </TouchableOpacity>
 
       <Image
-        source={require('../../assets/monster_card.png')}
+        source={require('../../assets/dark_magician.png')}
         style={styles.image}
         resizeMode="contain"
       />
@@ -59,13 +59,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
-    fontSize: 28,
-    fontWeight: 'bold',
-    marginBottom: 32,
+    fontSize: 30,
+    fontFamily: 'KronaOn-Regular',
+    marginBottom: 20,
   },
   label: {
     alignSelf: 'flex-start',
-    fontSize: 16,
+    fontSize: 18,
+    fontFamily: 'Poppins-Medium',
     marginBottom: 4,
     marginTop: 10,
   },
@@ -81,16 +82,32 @@ const styles = StyleSheet.create({
     marginTop: 24,
     paddingVertical: 12,
     paddingHorizontal: 32,
-    borderRadius: 20,
+    borderRadius: 10,
   },
   buttonText: {
     fontSize: 16,
-    fontWeight: 'bold',
+    fontFamily: 'Roboto-Bold',
     color: '#000',
   },
   image: {
-    width: 180,
-    height: 180,
+    width: 300,
+    height: 300,
     marginTop: 32,
+  },
+  loadingContainer: {
+    flex: 1,
+    backgroundColor: '#fff',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  loadingImage: {
+    width: 100,
+    height: 100,
+    marginBottom: 20,
+  },
+  loadingText: {
+    fontSize: 18,
+    fontFamily: "KronaOn-Regular",
+    color: '#333',
   },
 });

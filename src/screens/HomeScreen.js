@@ -152,7 +152,6 @@ export default function HomeScreen({ navigation, route }) {
             onChangeText={setSearch}
             style={styles.searchInput}
             placeholderTextColor="#C5C5C5"
-            autoCapitalize="none" // Evita que a primeira letra seja maiúscula ao digitar
             keyboardType="default" // Defina o tipo do teclado de forma padrão
             autoCorrect={false} // Desativa a correção automática
           />
@@ -284,8 +283,8 @@ const styles = StyleSheet.create({
   },
   headerTitle: {
     color: "white",
-    fontSize: 20,
-    fontWeight: "bold",
+    fontSize: 18,
+    fontFamily: "KronaOn-Regular",
   },
   searchContainer: {
     flexDirection: "row",
@@ -331,7 +330,7 @@ const styles = StyleSheet.create({
   },
   modalTitle: {
     fontSize: 18,
-    fontWeight: "bold",
+    fontFamily: "Poppins-Medium",
     marginBottom: 16,
     color: "#1F4E79",
   },
@@ -346,7 +345,7 @@ const styles = StyleSheet.create({
   },
   modalButtonText: {
     color: "#fff",
-    fontWeight: "bold",
+    fontFamily: "Roboto-Bold",
     fontSize: 16,
   },
   closeButton: {
@@ -377,6 +376,7 @@ const styles = StyleSheet.create({
   },
   loadingText: {
     fontSize: 18,
+    fontFamily: "KronaOn-Regular",
     color: "#333",
   },
 });

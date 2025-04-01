@@ -18,7 +18,7 @@ export default function WelcomeScreen({ navigation }) {
           style={[styles.button, styles.cadastroButton]}
           onPress={() => navigation.navigate('Register')}
         >
-          <Text style={styles.cadastroText}>Cadastro</Text>
+          <Text style={styles.cadastroText}>Sign up</Text>
         </TouchableOpacity>
       </View>
 
@@ -44,15 +44,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
-    fontSize: 28,
+    fontSize: 30,
     color: 'white',
-    fontWeight: 'bold',
-    marginBottom: 40,
+    marginBottom: 20,
+    fontFamily: 'KronaOn-Regular',
   },
   button: {
     width: '60%',
     padding: 12,
-    borderRadius: 25,
+    borderRadius: 10,
     marginBottom: 20,
     alignItems: 'center',
   },
@@ -63,18 +63,18 @@ const styles = StyleSheet.create({
     backgroundColor: '#1F4E79',
   },
   loginText: {
-    color: '#000',
-    fontWeight: 'bold',
-    fontSize: 16,
+    color: '#fff',
+    fontSize: 25,
+    fontFamily: 'Roboto-Bold',
   },
   cadastroText: {
     color: '#fff',
-    fontWeight: 'bold',
-    fontSize: 16,
+    fontSize: 25,
+    fontFamily: 'Roboto-Bold',
   },
   image: {
-    width: 300,
-    height: 380,
+    width: 320,
+    height: 400,
     alignSelf: 'center',
   },
 });

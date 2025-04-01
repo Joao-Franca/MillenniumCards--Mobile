@@ -202,8 +202,8 @@ const styles = StyleSheet.create({
   },
   headerTitle: {
     color: "white",
-    fontSize: 20,
-    fontWeight: "bold",
+    fontSize: 18,
+    fontFamily: "KronaOn-Regular",
   },
   container: {
     paddingTop: 100,
@@ -221,8 +221,8 @@ const styles = StyleSheet.create({
     borderColor: "#ccc",
   },
   cardTitle: {
-    fontSize: 22,
-    fontWeight: "bold",
+    fontSize: 20,
+    fontFamily: "Roboto-Bold",
     marginBottom: 12,
     textAlign: "center",
     color: "#000",
@@ -247,12 +247,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   label: {
-    fontWeight: "bold",
-    fontSize: 16,
+    fontSize: 15,
+    fontFamily: "Poppins-Medium",
     color: "#000",
   },
   detailText: {
-    fontSize: 16,
+    fontSize: 15,
+    fontFamily: "Roboto-Bold",
     color: "#333",
   },
   colorTag: {
@@ -274,16 +275,17 @@ const styles = StyleSheet.create({
   },
   statLabel: {
     color: "#fff",
-    fontWeight: "bold",
-    fontSize: 14,
+    fontFamily: "Roboto-Bold",
+    fontSize: 15,
   },
   statValue: {
     color: "#fff",
-    fontWeight: "bold",
-    fontSize: 18,
+    fontFamily: "Roboto-Bold",
+    fontSize: 16,
   },
   cardDesc: {
-    fontSize: 16,
+    fontSize: 15,
+    fontFamily: "Roboto-Regular",
     lineHeight: 22,
     textAlign: "justify",
     color: "#444",
@@ -316,7 +318,7 @@ const styles = StyleSheet.create({
   },
   modalTitle: {
     fontSize: 18,
-    fontWeight: "bold",
+    fontFamily: "Poppins-Medium",
     marginBottom: 16,
     color: "#1F4E79",
   },
@@ -331,7 +333,7 @@ const styles = StyleSheet.create({
   },
   modalButtonText: {
     color: "#fff",
-    fontWeight: "bold",
+    fontFamily: "Roboto-Bold",
     fontSize: 16,
   },
   closeButton: {
@@ -362,7 +364,7 @@ const styles = StyleSheet.create({
   loadingText: {
     marginTop: 20,
     fontSize: 18,
-    fontWeight: "bold",
+    fontFamily: "KronaOn-Regular",
     color: "#000",
   },
 });

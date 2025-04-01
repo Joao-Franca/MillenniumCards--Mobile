@@ -90,8 +90,8 @@ const styles = StyleSheet.create({
     marginRight: 12,
   },
   cardName: {
-    fontSize: 16,
-    fontWeight: 'bold',
+    fontSize: 15,
+    fontFamily: 'Roboto-Bold',
     color: '#333',
     flexShrink: 1,
   },

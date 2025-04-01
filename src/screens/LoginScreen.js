@@ -32,7 +32,7 @@ export default function LoginScreen({ navigation }) {
           routes: [{ name: 'Home', params: { username } }],
         });
       } else {
-        Alert.alert('Erro', 'Usuário ou senha inválidos');
+        Alert.alert('Erro', 'Invalid username or password');
         setLoading(false);
       }
     }, 2000);
@@ -75,7 +75,7 @@ export default function LoginScreen({ navigation }) {
         style={styles.input}
         onChangeText={setUsername}
         value={username}
-        placeholder="Digite seu usuário"
+        placeholder="Enter your username"
       />
 
       <Text style={styles.label}>Password</Text>
@@ -83,7 +83,7 @@ export default function LoginScreen({ navigation }) {
         style={styles.input}
         onChangeText={setPassword}
         value={password}
-        placeholder="Digite sua senha"
+        placeholder="Enter your password"
         secureTextEntry
       />
 
@@ -109,13 +109,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
-    fontSize: 28,
-    fontWeight: 'bold',
-    marginBottom: 32,
+    fontSize: 30,
+    fontFamily: 'KronaOn-Regular',
+    marginBottom: 20,
   },
   label: {
     alignSelf: 'flex-start',
-    fontSize: 16,
+    fontSize: 18,
+    fontFamily: 'Poppins-Medium',
     marginBottom: 4,
     marginTop: 10,
   },
@@ -131,16 +132,16 @@ const styles = StyleSheet.create({
     marginTop: 24,
     paddingVertical: 12,
     paddingHorizontal: 32,
-    borderRadius: 20,
+    borderRadius: 10,
   },
   buttonText: {
     fontSize: 16,
-    fontWeight: 'bold',
+    fontFamily: 'Roboto-Bold',
     color: '#000',
   },
   image: {
-    width: 180,
-    height: 180,
+    width: 300,
+    height: 300,
     marginTop: 32,
   },
   loadingContainer: {
@@ -156,6 +157,7 @@ const styles = StyleSheet.create({
   },
   loadingText: {
     fontSize: 18,
+    fontFamily: "KronaOn-Regular",
     color: '#333',
   },
 });

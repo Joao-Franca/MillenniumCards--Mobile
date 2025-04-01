@@ -179,8 +179,8 @@ const styles = StyleSheet.create({
   },
   headerTitle: {
     color: "white",
-    fontSize: 20,
-    fontWeight: "bold",
+    fontSize: 'KronaOn-Regular',
+    fontSize: 18,
   },
   deckLabel: {
     backgroundColor: "#1F4E79",
@@ -192,8 +192,8 @@ const styles = StyleSheet.create({
   },
   deckLabelText: {
     color: "#fff",
-    fontWeight: "bold",
-    fontSize: 16,
+    fontSize: 'Roboto-Bold',
+    fontSize: 20,
     textAlign: "center",
   },
   modalOverlay: {
@@ -213,7 +213,7 @@ const styles = StyleSheet.create({
   },
   modalTitle: {
     fontSize: 18,
-    fontWeight: "bold",
+    fontFamily: "Poppins-Medium",
     marginBottom: 16,
     color: "#1F4E79",
   },
@@ -228,7 +228,7 @@ const styles = StyleSheet.create({
   },
   modalButtonText: {
     color: "#fff",
-    fontWeight: "bold",
+    fontFamily: "Roboto-Bold",
     fontSize: 16,
   },
   closeButton: {
@@ -259,6 +259,7 @@ const styles = StyleSheet.create({
   },
   loadingText: {
     fontSize: 18,
+    fontFamily: "KronaOn-Regular",
     color: "#333",
   },
 });
